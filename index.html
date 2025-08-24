@@ -451,7 +451,7 @@
 
         @media (min-width: 1024px) {
             .categories-grid {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
         }
 
@@ -462,6 +462,7 @@
             text-align: center;
             box-shadow: var(--shadow-card);
             transition: transform 0.3s ease;
+            margin-bottom: 2rem;
         }
 
         .category-card:hover {
@@ -477,9 +478,9 @@
         }
 
         .category-title {
-            font-size: 1.125rem;
+            font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             color: var(--foreground);
         }
 
@@ -493,6 +494,35 @@
             font-size: 0.875rem;
             color: var(--primary);
             margin-bottom: 1rem;
+        }
+
+        /* Menu Items */
+        .menu-items {
+            margin: 1.5rem 0;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item-name {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--foreground);
+        }
+
+        .menu-item-price {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary);
         }
 
         /* Footer */
@@ -579,18 +609,18 @@
 
                 <!-- Auth Buttons -->
                 <div class="auth-buttons">
-                    <button class="btn btn-outline">
+                    <a href="https://wa.me/6285111222333?text=Halo%20saya%20ingin%20login%20ke%20Dnatoto%20Foodcourt" target="_blank" class="btn btn-outline">
                         <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                         </svg>
                         <span class="btn-text">Login</span>
-                    </button>
-                    <button class="btn btn-hero">
+                    </a>
+                    <a href="https://wa.me/6285111222333?text=Halo%20saya%20ingin%20daftar%20di%20Dnatoto%20Foodcourt" target="_blank" class="btn btn-hero">
                         <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
                         </svg>
                         <span class="btn-text">Daftar</span>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -626,15 +656,15 @@
                 
                 <!-- CTA Buttons -->
                 <div class="hero-buttons">
-                    <button class="btn btn-hero btn-lg">
+                    <a href="https://wa.me/6285111222333?text=Halo%20saya%20ingin%20pesan%20makanan%20di%20Dnatoto%20Foodcourt" target="_blank" class="btn btn-hero btn-lg">
                         <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
                         </svg>
                         Pesan Sekarang
-                    </button>
-                    <button class="btn btn-food btn-lg">
+                    </a>
+                    <a href="#makanan" class="btn btn-food btn-lg">
                         Lihat Menu
-                    </button>
+                    </a>
                 </div>
                 
                 <!-- Features -->
@@ -680,36 +710,118 @@
             </p>
             
             <div class="categories-grid">
-                <div class="category-card">
+                <div class="category-card" id="makanan">
                     <img src="/assets/food-burger.jpg" alt="Makanan Utama" class="category-image" />
                     <h3 class="category-title">Makanan Utama</h3>
-                    <p class="category-description">Nasi, mie, burger, dan hidangan utama lainnya</p>
-                    <p class="category-count">25+ items</p>
-                    <button class="btn btn-outline">Lihat Semua</button>
+                    <p class="category-description">Berbagai pilihan makanan lezat untuk kenyang</p>
+                    
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="menu-item-name">Nasi Ayam Bakar</span>
+                            <span class="menu-item-price">Rp 25.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Burger Cheese</span>
+                            <span class="menu-item-price">Rp 20.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Mie Ayam Special</span>
+                            <span class="menu-item-price">Rp 18.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Nasi Fried Rice</span>
+                            <span class="menu-item-price">Rp 22.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Pizza Margherita</span>
+                            <span class="menu-item-price">Rp 35.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Sate Ayam (10 tusuk)</span>
+                            <span class="menu-item-price">Rp 28.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Gado-gado</span>
+                            <span class="menu-item-price">Rp 15.000</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/6285111222333?text=Halo%20saya%20ingin%20pesan%20makanan%20utama%20dari%20Dnatoto%20Foodcourt" target="_blank" class="btn btn-outline">Pesan Sekarang</a>
                 </div>
                 
-                <div class="category-card">
+                <div class="category-card" id="minuman">
                     <img src="/assets/drinks-juice.jpg" alt="Minuman Segar" class="category-image" />
                     <h3 class="category-title">Minuman Segar</h3>
-                    <p class="category-description">Jus, kopi, teh, dan minuman segar lainnya</p>
-                    <p class="category-count">20+ items</p>
-                    <button class="btn btn-outline">Lihat Semua</button>
+                    <p class="category-description">Minuman segar untuk melepas dahaga</p>
+                    
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="menu-item-name">Jus Jeruk Fresh</span>
+                            <span class="menu-item-price">Rp 12.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Es Teh Manis</span>
+                            <span class="menu-item-price">Rp 8.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Kopi Americano</span>
+                            <span class="menu-item-price">Rp 15.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Cappuccino</span>
+                            <span class="menu-item-price">Rp 18.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Jus Alpukat</span>
+                            <span class="menu-item-price">Rp 14.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Es Lemon Tea</span>
+                            <span class="menu-item-price">Rp 10.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Milkshake Strawberry</span>
+                            <span class="menu-item-price">Rp 20.000</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/6285111222333?text=Halo%20saya%20ingin%20pesan%20minuman%20dari%20Dnatoto%20Foodcourt" target="_blank" class="btn btn-outline">Pesan Sekarang</a>
                 </div>
                 
-                <div class="category-card">
+                <div class="category-card" id="cemilan">
                     <img src="/assets/snacks-variety.jpg" alt="Cemilan" class="category-image" />
                     <h3 class="category-title">Cemilan</h3>
-                    <p class="category-description">Keripik, biskuit, dan cemilan favorit lainnya</p>
-                    <p class="category-count">15+ items</p>
-                    <button class="btn btn-outline">Lihat Semua</button>
-                </div>
-                
-                <div class="category-card">
-                    <img src="/assets/hero-food.jpg" alt="Dessert" class="category-image" />
-                    <h3 class="category-title">Dessert</h3>
-                    <p class="category-description">Es krim, kue, dan dessert manis lainnya</p>
-                    <p class="category-count">12+ items</p>
-                    <button class="btn btn-outline">Lihat Semua</button>
+                    <p class="category-description">Camilan enak untuk ngemil santai</p>
+                    
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="menu-item-name">Keripik Pisang</span>
+                            <span class="menu-item-price">Rp 8.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">French Fries</span>
+                            <span class="menu-item-price">Rp 12.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Onion Rings</span>
+                            <span class="menu-item-price">Rp 15.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Nachos Cheese</span>
+                            <span class="menu-item-price">Rp 18.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Popcorn Caramel</span>
+                            <span class="menu-item-price">Rp 10.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Kacang Disco</span>
+                            <span class="menu-item-price">Rp 7.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Chicken Wings (5 pcs)</span>
+                            <span class="menu-item-price">Rp 22.000</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/6285111222333?text=Halo%20saya%20ingin%20pesan%20cemilan%20dari%20Dnatoto%20Foodcourt" target="_blank" class="btn btn-outline">Pesan Sekarang</a>
                 </div>
             </div>
         </div>
@@ -753,7 +865,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Dnatoto Foodcourt Express. Semua hak dilindungi.</p>
+                <p>&copy; 2025 Dnatoto Foodcourt Express. Semua hak dilindungi.</p>
                 <p>Made with ❤️ for food lovers</p>
             </div>
         </div>
